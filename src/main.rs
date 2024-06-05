@@ -1,6 +1,6 @@
 // Конвертация температур между значениями по Фаренгейту к Цельсию.
 fn fahrenheit_to_celsius(fahrenheit: f64) -> f64 {
-    // (F − 32) / 1,8
+    // (F − 32) / 1.8
     (fahrenheit - 32.0) / 1.8
 }
 
@@ -30,6 +30,8 @@ fn fib(numb: u32) -> u32 {
     else {
         return fib(numb - 1) + fib(numb - 2)
     }
+
+    //numb ? 1 : fib(numb - 1) + fib(numb - 2)
 }
 
 fn read_fib_n() -> u32 {
@@ -81,20 +83,21 @@ My true love gave to me", b[i]);
         println!("");
     }
 }
+// ------------------------------------------------------------------------------------------------
 
 fn main() {
 
     // Конвертация температур между значениями по Фаренгейту к Цельсию.
     let temperature: f64 = read_fahrenheit_temp();
     let temperature: f64 = fahrenheit_to_celsius(temperature);
-    println!("You temperature in celsius: {}", temperature);
+    println!("You temperature in celsius: {:.2}", temperature);
 
     // Генерирование n-го числа Фибоначчи.
-    let i = read_fib_n(); 
-    let numb = fib(i);
-    println!("The {i} position of a number in the Fibonacci sequence: {numb}");
+    //let i = read_fib_n(); 
+    //let numb = fib(i);
+    //println!("The {i} position of a number in the Fibonacci sequence: {numb}");
 
     // Распечатайте текст рождественской песни "Двенадцать дней Рождества", воспользовавшись повторами в песне.
 
-    twelve_days_of_chris();
+    //twelve_days_of_chris();
 }
